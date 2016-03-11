@@ -1,0 +1,30 @@
+.categories-main
+
+  .main-post
+    border-bottom: 1px solid $light-gray
+    
+    .post-content
+      padding: 1.25em
+      
+      .main-post-content
+        font-size: 0.875em
+        
+  .footer-articles
+    +row
+    border-bottom: 1px solid $light-gray
+    
+    .normal-post
+      float: left
+      
+      p
+        font-size: 0.875em
+      
+      +media($medium-screen)
+        +grid-item-columns(6)
+        
+        
+      &:first-child
+        border-right: 1px solid $light-gray
+        
+      
+      

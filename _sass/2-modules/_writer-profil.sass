@@ -1,0 +1,20 @@
+.writer-profil
+  padding: 30px
+  border-top: 1px solid $light-gray
+  +row
+  
+  .img-container
+    float: left
+    
+    +media($medium-screen)
+      +grid-item-columns(4)
+      
+    img
+      +size(100% 150px)
+      
+  .content-container
+    float: left
+    font-size: 0.75em
+    
+    +media($medium-screen)
+      +grid-item-columns(8)

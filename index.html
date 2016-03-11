@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<main class="home">
+  
+  {% include hero-news.html %}
+  
+  {% include banners/full-banner.html %}
+  
+  <div class="post-container">
+    {% include posts/post-without-img.html %}
+    {% include posts/post-with-two-column-and-img.html %}
+    {% include posts/jumbotron-post.html %}
+    {% include posts/post-with-two-img.html %}
+    {% include posts/post-with-two-img.html %}
+  </div>
+  
+  
+
+  <!--<h1 class="page-heading">Posts</h1>-->
+
+  <!--<ul class="post-list">-->
+  <!--  {% for post in site.posts %}-->
+  <!--    <li>-->
+  <!--      <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>-->
+
+  <!--      <h2>-->
+  <!--        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>-->
+  <!--      </h2>-->
+  <!--    </li>-->
+  <!--  {% endfor %}-->
+  <!--</ul>-->
+
+  <!--<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>-->
+
+</main>

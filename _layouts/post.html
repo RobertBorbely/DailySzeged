@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <img src="https://images.unsplash.com/photo-1447078806655-40579c2520d6?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925"></img>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    {{ content }}
+    
+    {% include writer-profil.html %}
+  </div>
+  
+  <aside class="post-aside">
+    
+  </aside>
+
+</article>
+
+{% include featured-posts-slider.html %}

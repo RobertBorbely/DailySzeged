@@ -1,0 +1,70 @@
+.profil
+  float: left
+  border-right: 1px solid $light-gray 
+      
+  +media($medium-screen)
+    +grid-item-columns(8)
+    
+  .introduction
+    +row
+    border-bottom: 1px solid $light-gray
+    
+    .img-container
+      float: left
+      
+      img
+        height: 330px
+  
+      
+      +media($medium-screen)
+        +grid-item-columns(4)
+        
+    .content-container
+      float: left
+      padding: 30px
+      font-size: 0.875em
+      
+      +media($medium-screen)
+        +grid-item-columns(8)
+        
+  .contact
+    +row
+    .contact-list,
+    .interesting
+      float: left
+      
+      +media($medium-screen)
+        +grid-item-columns(6)
+        
+        
+  .left-img-column
+    .post
+      border-top: 1px solid $light-gray
+      
+      header
+        float: left
+        +media($medium-screen)
+          +grid-item-columns(6)
+      .content
+        float: left
+        padding: 20px
+        +media($medium-screen)
+          +grid-item-columns(6)
+        
+        p
+          font-size: 0.875em
+        .fa
+          padding-right: 5px
+          
+  .right-img-column
+    @extend .left-img-column
+    .post
+      header
+        float: right
+        
+      .content
+        float: right
+        
+    &:last-child
+      border-bottom: 1px solid $light-gray
+      

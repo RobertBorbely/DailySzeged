@@ -1,0 +1,123 @@
+.news-wrapper
+  +row
+      
+  .item
+    float: left
+    position: relative
+    overflow: hidden
+    cursor: pointer
+    
+    &:hover .overlay
+      background: rgba(0, 0, 0, 0.7)
+      
+    &:hover .intro
+      margin-bottom: 0 !important
+    
+    .overlay
+      +size(100% em(450px))
+      +transition(all .3s ease-in-out)
+    
+    .title
+      position: absolute
+      bottom: 0
+      +pad(0 2em 1.8em 2em)
+      
+      h1,
+      h2,
+      p
+        margin-bottom: 0
+      
+      h2 
+        font-size: 1.25em
+        
+      p
+        padding-top: 0.5em
+        
+      .tag-default
+        font-size: 0.65em
+        background-color: $blue
+        +pad(0.5em)
+        color: white
+        
+      .legend-default
+        font:
+          size: 0.6em
+          weight: 300
+        color: rgba(255, 255, 255, 0.27)
+        
+      .title-link
+        color: white
+      
+    .intro
+      padding-top: 1.8em
+      margin-bottom: -190px
+      color: rgba(255, 255, 255, 0.7)
+      font:
+        size: 0.75em
+        weight: 300
+      +transition(all .3s ease-in-out)
+      
+      .more-link
+        font:
+          weight: bold
+          size: 1em
+        display: block
+        margin-top: 1em
+      
+    
+  .big-column
+    box-shadow: rgba(0, 0, 0, 0.8) 0 -190px 120px -50px inset
+    background:
+      image: url(https://snap-photos.s3.amazonaws.com/img-thumbs/960w/DPKNIIN5X3.jpg)
+      repeat: no-repeat
+      size: cover
+      position: center center
+    
+    +media($medium-screen)
+      +size(100% / 12 * 8  em(450px))
+      
+    +media(max-width $medium-screen) 
+      +size(100% em(500px))
+    
+    +media(min-width $small-screen max-width $medium-screen)
+      +size(100% em(350px))
+      
+    +media(max-width $small-screen)
+      +size(100% em(200px))
+      
+  .small-column
+    float: left
+    
+    +media($medium-screen)
+      +size(100% / 12 * 4  em(450px))
+    
+    +media(max-width $medium-screen)
+      +size(100% em(300px))
+      
+    +media(max-width $small-screen)
+      +size(100% em(400px))
+      
+      
+    .secondary
+      box-shadow: rgba(0, 0, 0, 0.8) 0 -150px 90px -50px inset
+      background:
+        image: url(https://snap-photos.s3.amazonaws.com/img-thumbs/960w/VXFA58HGJ1.jpg)
+        repeat: no-repeat
+        size: cover
+        position: center center
+      
+      +media($medium-screen)
+        +size(100% em(225px))
+        
+      +media(max-width $medium-screen)
+        +size(50% inherit)
+        
+      +media(max-width $small-screen)
+        +size(inherit em(200))
+        
+    .secondary:last-child
+      background:
+        image: url(https://snap-photos.s3.amazonaws.com/img-thumbs/960w/T4W98A54R5.jpg)
+        repeat: no-repeat
+        size: cover
+        position: center center

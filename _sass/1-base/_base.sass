@@ -1,0 +1,43 @@
+@mixin grid-item-columns($columns)
+  width: (100% / 12) * $columns
+
+.main-wrapper
+  +outer-container
+  box-shadow: 0px 4px 12.61px 0.39px rgba(0, 0, 0, 0.35)
+
+.wrapper
+  +outer-container
+  
+.post-container
+  border: 1px solid $light-gray
+  border-bottom: none
+  background-color: white
+  
+  +media($large-screen)
+    +grid-item-columns(8)
+    
+.categories-main
+  border-right: 1px solid $light-gray
+  float: left
+  
+  +media($medium-screen)
+    +grid-item-columns(8)
+    
+.categories-aside
+  float: left
+  
+  +media($medium-screen)
+    +grid-item-columns(4)
+    
+.categories
+  +row
+  
+.lead
+  font-size: 0.875em
+    
+    
+.left
+  float: left
+  
+.right
+  float: right

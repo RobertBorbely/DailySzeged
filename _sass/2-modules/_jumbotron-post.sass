@@ -1,0 +1,70 @@
+.jumbotron
+  +size(100% em(450px))
+  box-shadow: rgba(0, 0, 0, 0.8) 0 -190px 120px -50px inset
+  background:
+    image: url(https://images.unsplash.com/photo-1445346366695-5bf62de05412?crop=entropy&fit=crop&fm=jpg&h=650&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1375)
+    size: cover
+    repeat: no-repeat
+    position: center center 
+    
+  .item
+    position: relative
+    overflow: hidden
+    cursor: pointer
+    
+    &:hover .overlay
+      background: rgba(0, 0, 0, 0.7)
+      
+    &:hover .intro
+      margin-bottom: 0 !important
+    
+    .overlay
+      +size(100% em(450px))
+      +transition(all .3s ease-in-out)
+    
+    .title
+      position: absolute
+      bottom: 0
+      +pad(0 2em 1.8em 2em)
+      
+      h1,
+      h2,
+      p
+        margin-bottom: 0
+      
+      h2 
+        font-size: 1.25em
+        
+      p
+        padding-top: 0.5em
+        
+      .tag-default
+        font-size: 0.65em
+        background-color: $blue
+        +pad(0.5em)
+        color: white
+        
+      .legend-default
+        font:
+          size: 0.6em
+          weight: 300
+        color: rgba(255, 255, 255, 0.27)
+        
+      .title-link
+        color: white
+      
+    .intro
+      padding-top: 1.8em
+      margin-bottom: -190px
+      color: rgba(255, 255, 255, 0.7)
+      font:
+        size: 0.75em
+        weight: 300
+      +transition(all .3s ease-in-out)
+      
+      .more-link
+        font:
+          weight: bold
+          size: 1em
+        display: block
+        margin-top: 1em

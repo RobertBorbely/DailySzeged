@@ -1,0 +1,17 @@
+.categories-container
+  +row
+  width: 100%
+  box-shadow: -10px 0px 0px 0px $blue
+  
+  .column
+    float: left
+    border-bottom: 1px solid $light-gray
+    
+    +media($medium-screen)
+      +grid-item-columns(6)
+      
+    &:first-child
+      border-right: 1px solid $light-gray
+      
+  &:last-child
+    box-shadow: -10px 0px 0px 0px green
