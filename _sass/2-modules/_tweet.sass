@@ -1,0 +1,46 @@
+.tweet-header-section
+  background-color: $dark-blue
+  height: 60px
+  margin-bottom: 20px
+  
+
+.tweet
+  padding: 0 20px 20px 20px
+  
+  .tweet-author-container
+    +clearfix
+    .tweet-author
+      font:
+        weight: 500
+        size: 0.875em
+      text-transform: uppercase
+      display: inline-block
+      
+    .tweet-time
+      font-size: 0.875em
+    
+    
+  .tweet-inner
+    +row
+    
+    .tweet-img-container
+      float: left
+      +media($medium-screen)
+        +grid-item-columns(3)
+        
+    .tweet-content-container
+      float: left
+      background-color: white
+      box-shadow: 0px 4px 12.61px 0.39px rgba(0, 0, 0, 0.35)
+      border-radius: 0 10px 10px 10px
+      overflow: hidden
+      
+      +media($medium-screen)
+        +grid-item-columns(8)
+        margin-left: 20px
+        margin-top: 25px
+        
+      p
+        padding: 10px
+        font-size: 0.875em
+    
