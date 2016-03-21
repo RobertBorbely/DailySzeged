@@ -1,5 +1,7 @@
 @mixin grid-item-columns($columns)
   width: (100% / 12) * $columns
+  
+$footer-link-color: rgba(255, 255, 255, 0.7)
 
 .main-wrapper
   +outer-container
@@ -62,9 +64,15 @@
       text-align: center
     
       ul
-        li
-          color: white
-          display: inline-block
-          padding: 15px 10px 15px 10px,
-          font-size: 12px
-          font-weight: 300
+        .footer-link
+          color: $footer-link-color
+          +transition(all 0.3s ease-in-out)
+          
+          &:hover
+            color: white
+            
+          li
+            display: inline-block
+            padding: 15px 10px 15px 10px,
+            font-size: 12px
+            font-weight: 300
