@@ -1,13 +1,17 @@
 .post
   +row
+  float: left
   
+  .post-header
+    .post-header-title
+      padding: 15px 30px
+      margin: 0
   .post-content
     border-right: 1px solid $light-gray
-    float: left
     
     h1,
     h4,
-    p
+    p,
       padding: 5px 30px
       
     p
@@ -15,13 +19,17 @@
       
 
   
-    +media($medium-screen)
-      +grid-item-columns(8)
+  +media($medium-screen)
+    +grid-item-columns(8)
   
-  .post-aside
-    float: left
-    background-color: $light-gray
-  
-  
-    +media($medium-screen)
-      +grid-item-columns(4)
+.post-aside
+  float: left
+  background-color: $light-gray
+
+
+  +media($medium-screen)
+    +grid-item-columns(4)
+    
+.post-outer
+  border-bottom: 1px solid $light-gray
+  +clearfix
