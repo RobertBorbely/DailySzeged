@@ -1,0 +1,16 @@
+$header-hero-height: 100px
+$header-hero-bacground: white
+
+
+.header-hero
+  background-color: $header-hero-bacground
+  max-height: $header-hero-height
+  +outer-container
+  padding: 10px
+  
+  .banner-container
+    +size(150px 80px)
+    background-color: $light-gray
+    
+    +media($medium-screen)
+      +size(350px 80px)
