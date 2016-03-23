@@ -1,32 +1,47 @@
 $font-awesome-social-size: 30px
+$post-padding: 0 15px
 
 .post
   +row
   float: left
+  background-color: #fff
   
   .post-header
     .post-header-title
-      padding: 15px 30px
+      padding: 15px 15px
       margin: 0
       
       
+    .meta-container
+      +clearfix
+      
     .legend-container
-      padding: 0 30px
+      padding: $post-padding
       padding-bottom: 15px
-      .post-tag
-        font-size: 0.65em
-        background-color: $blue
-        +pad(0.8em)
-        color: white
+      
+      .post-tag-link
+        
+        .post-tag
+          font-size: 0.65em
+          background-color: $blue
+          +pad(0.8em)
+          color: white
+          +transition(all 0.3s ease-in-out)
           
+        &:hover .post-tag
+          background-color: darken($blue, 10)
+        
       .post-date
         font:
           size: 0.7em
           weight: 300
         color: rgba(0, 0, 0, 0.27)
         
+    img
+      padding: $post-padding
+        
     .social-container
-      padding: 0 30px
+      padding: $post-padding
       padding-bottom: 15px
       
       .fa-stack
@@ -42,12 +57,12 @@ $font-awesome-social-size: 30px
         font-size: $font-awesome-social-size
         
   .post-content
-    border-right: 1px solid $light-gray
+    border-right: $base-border
     
     h1,
     h4,
     p,
-      padding: 5px 30px
+      padding: 5px 15px
       
     p
       font-size: 0.875em
@@ -66,5 +81,5 @@ $font-awesome-social-size: 30px
     +grid-item-columns(4)
     
 .post-outer
-  border-bottom: 1px solid $light-gray
+  border-bottom: $base-border
   +clearfix

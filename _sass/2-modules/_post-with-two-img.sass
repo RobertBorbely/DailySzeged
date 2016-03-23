@@ -5,13 +5,13 @@
   
   .column
     float: left
-    border-bottom: 1px solid $light-gray
+    border-bottom: $base-border
     
     +media($medium-screen)
       +grid-item-columns(6)
       
     &:first-child
-      border-right: 1px solid $light-gray
+      border-right: $base-border
       
   &:last-child
     box-shadow: -10px 0px 0px 0px green

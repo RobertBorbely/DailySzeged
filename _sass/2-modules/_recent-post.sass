@@ -1,0 +1,23 @@
+.recent-posts
+  background-color: #fff
+  
+  .recent-post-header
+    background-color: $dark-blue
+    color: white
+    padding: 20px 20px
+    height: 60px
+    text-align: center
+    
+  .recent-post-content
+    padding: 20px
+    
+    ul
+      list-style: disc inside
+      li
+        padding: 5px 0
+        a
+          color: $dark-blue
+          +transition(all 0.3s ease-in-out)
+          
+          &:hover
+            color: $blue

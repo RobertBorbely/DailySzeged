@@ -1,13 +1,13 @@
 .profil
   float: left
-  border-right: 1px solid $light-gray 
+  border-right: $base-border 
       
   +media($medium-screen)
     +grid-item-columns(8)
     
   .introduction
     +row
-    border-bottom: 1px solid $light-gray
+    border-bottom: $base-border
     
     .img-container
       float: left
@@ -39,7 +39,7 @@
         
   .left-img-column
     .post
-      border-top: 1px solid $light-gray
+      border-top: $base-border
       
       header
         float: left
@@ -66,5 +66,5 @@
         float: right
         
     &:last-child
-      border-bottom: 1px solid $light-gray
+      border-bottom: $base-border
       
