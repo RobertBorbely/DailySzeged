@@ -1,5 +1,11 @@
 @mixin grid-item-columns($columns)
+  float: left
   width: (100% / 12) * $columns
+  
+$rss: #f26522
+$facebook: #3b5998
+$twitter: #55acee
+
   
 $footer-link-color: rgba(255, 255, 255, 0.7)
 
@@ -75,3 +81,18 @@ $footer-link-color: rgba(255, 255, 255, 0.7)
             padding: 15px 10px 15px 10px,
             font-size: 12px
             font-weight: 300
+            
+.share
+  color: $light-gray
+  +transition(all 0.3s ease-in-out)
+  
+.rss
+  &:hover
+    color: $rss
+    
+.facebook  
+  &:hover 
+    color: $facebook
+.twitter  
+  &:hover 
+    color: $twitter
