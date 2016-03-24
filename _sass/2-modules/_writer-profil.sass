@@ -1,20 +1,48 @@
 .writer-profil
-  padding: 30px
+  padding: 15px
   border-top: $base-border
   +row
   
+  +media(max-width $small-screen)
+    text-align: center
+  
   .img-container
-    float: left
+    margin-bottom: 15px
     
     +media($medium-screen)
-      +grid-item-columns(4)
+      +grid-item-columns(2)
       
     img
-      +size(100% 150px)
+      +size(100px 100px)
+      margin: 0 auto
       
   .content-container
     float: left
     font-size: 0.75em
     
     +media($medium-screen)
-      +grid-item-columns(8)
+      +grid-item-columns(10)
+      padding-left: 15px
+      
+    h4
+      margin-bottom: 10px
+      padding: 0
+      
+    p
+      padding: 0
+      font-size: 12px
+      
+  .social-container
+    +grid-item-columns(12)
+    
+    +media($medium-screen)
+      +grid-item-columns(10)
+      +shift(2)
+      padding-left: 15px
+      
+    .fa
+      padding: 0 5px
+      font-size: 20px
+      
+      &:first-child
+        padding-left: 0
