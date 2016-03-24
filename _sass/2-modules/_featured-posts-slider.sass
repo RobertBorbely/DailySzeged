@@ -1,14 +1,62 @@
 .featured-posts-slider
   +row
-  text-align: center
-  padding-top: 50px
+  padding-top: 30px
   border-bottom: $base-border
   border-top: $base-border
+  
+  .featured-title
+    //background-color: $blue
+    text-align: left
+    color: white
+    margin: 5px 15px
+    border-bottom: 2px solid $dark-blue
+    padding: 5px 0 !important
+    font-size: 0.875em
+    font-weight: 400
+    margin-bottom: 20px
+    
+    span
+      background-color: $dark-blue
+      padding: 5px 10px
+      
   .column
     float: left
+    +transition(all 0.3s ease-in-out)
+    
+    &:hover h5
+      color: $blue
+      
+    +media(max-width $small-screen)
+      padding-left: 15px
+      padding-right: 15px
+      
+    +media(min-width $small-screen max-width $medium-screen)
+      padding-left: 15px
+      padding-right: 15px
+    
+    header
+      position: relative
+      
+      .img-link
+      
+      .tag-link
+      
+        .category-tag
+          position: absolute
+          bottom: 0
+          left: 0
+          background-color: $blue
+          color: white
+          padding: 4px 8px
+          font-size: 0.6125em
+          +transition(all 0.3s ease-in-out)
+          
+        &:hover .category-tag
+          background-color: darken($blue, 15)
     
     h5
-      margin-top: 15px
+      margin-top: 5px
+      font-size: 0.875em
     
     p
       font-size: 0.875em
