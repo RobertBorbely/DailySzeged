@@ -34,9 +34,7 @@
     });  
   }
   
-  $(function(){
-    addNegativeMarginToIntro();
-    MobileMenuInit();
+  function ModalAction() {
     $("#modal-1").on("change", function() {
       if ($(this).is(":checked")) {
         $("body").addClass("modal-open");
@@ -52,5 +50,11 @@
     $(".modal-inner").on("click", function(e) {
       e.stopPropagation();
     });
+  }
+  
+  $(function(){
+    addNegativeMarginToIntro();
+    MobileMenuInit();
+    ModalAction();
   });
 })(jQuery);

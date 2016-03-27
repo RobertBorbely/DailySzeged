@@ -1,7 +1,61 @@
 .categories-container
   +row
   width: 100%
-  box-shadow: -10px 0px 0px 0px $blue
+  // box-shadow: -10px 0px 0px 0px $blue
+  
+  header
+    position: relative
+    
+    .img-link
+    
+    .tag-link
+    
+      .category-tag
+        position: absolute
+        top: 0
+        right: 0
+        background-color: $blue
+        color: white
+        padding: 4px 8px
+        font-size: 0.6125em
+        +transition(all 0.3s ease-in-out)
+        
+      &:hover .category-tag
+        background-color: darken($blue, 15)
+  
+  .featured-title
+    //background-color: $blue
+    text-align: left
+    color: white
+    margin-top: 15px
+    padding: 10px 15px !important
+    font-size: 1.5em
+    font-weight: 400
+    // margin-bottom: 20px
+    margin: 0
+    background-color: $blue
+    text-transform: uppercase
+    border: none
+    +clearfix
+    
+  .featured-title-container
+    +clearfix
+    height: 60px
+    background-color: $blue
+    color: white
+    
+    h4
+      font-size: 24px
+      padding: 16px 0 16px 15px
+      text-transform: uppercase
+      margin: 0
+      
+    span
+      font:
+        size: 12px
+        weight: 300
+      padding: 21px 15px 21px 0
+      
   
   .column
     float: left
@@ -13,5 +67,5 @@
     &:first-child
       border-right: $base-border
       
-  &:last-child
-    box-shadow: -10px 0px 0px 0px green
+  // &:last-child
+  //   box-shadow: -10px 0px 0px 0px green

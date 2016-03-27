@@ -20,6 +20,26 @@
     border-left: $base-border
     
 .with-img
+
+  header
+    position: relative
+    
+    .img-link
+    
+    .tag-link
+    
+      .category-tag
+        position: absolute
+        top: 0
+        right: 0
+        background-color: $blue
+        color: white
+        padding: 4px 8px
+        font-size: 0.6125em
+        +transition(all 0.3s ease-in-out)
+        
+      &:hover .category-tag
+        background-color: darken($blue, 15)
     
   .content-box
     border-bottom: $base-border
