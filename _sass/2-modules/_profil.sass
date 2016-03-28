@@ -1,9 +1,16 @@
+$font-awesome-social-size: 30px
+
 .profil
   float: left
-  border-right: $base-border 
+  border-right: $base-border
+  border-left: $base-border
+  background-color: #fff
       
   +media($medium-screen)
     +grid-item-columns(8)
+    
+  .featured-title
+    margin: 0 !important
     
   .introduction
     +row
@@ -13,9 +20,8 @@
       float: left
       
       img
-        height: 330px
+        +size(100% 250px)
   
-      
       +media($medium-screen)
         +grid-item-columns(4)
         
@@ -32,24 +38,62 @@
     .contact-list,
     .interesting
       float: left
+      +grid-item-columns(12)
       
-      +media($medium-screen)
+      +media($large-screen)
         +grid-item-columns(6)
+        
+    .contact-list
+      padding: 15px
+      
+      ul
+        li
+          a
+            .link-content
+              color: $base-font-color
+              
+    .interesting
+      padding: 15px
         
         
   .left-img-column
     .post
       border-top: $base-border
+      border-right: none
+      
+      &:first-child
+        border-top: none
+      
+      +media($medium-screen)
+        +grid-item-columns(12)
       
       header
         float: left
-        +media($medium-screen)
+        +media($large-screen)
           +grid-item-columns(6)
+          
+        img
+          +size(100% 265px)
       .content
         float: left
         padding: 20px
-        +media($medium-screen)
+        +media($large-screen)
           +grid-item-columns(6)
+          
+        .footer
+          
+          .small
+            .fa-stack
+              font-size: $font-awesome-social-size
+              +size($font-awesome-social-size $font-awesome-social-size)
+            
+            .fa-stack-1x
+              color: white
+              font-size: $font-awesome-social-size / 2
+              line-height: $font-awesome-social-size
+              
+            .fa-stack-2x
+              font-size: $font-awesome-social-size
         
         p
           font-size: 0.875em
@@ -59,6 +103,8 @@
   .right-img-column
     @extend .left-img-column
     .post
+      &:first-child
+        border-top: $base-border
       header
         float: right
         
